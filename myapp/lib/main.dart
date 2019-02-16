@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/home.dart';
+import 'package:myapp/Page/home.dart';
 import 'package:myapp/peoples.dart';
 import 'package:myapp/found.dart';
 import 'package:myapp/mine.dart';
@@ -31,7 +31,7 @@ class SYTabbar extends StatefulWidget {
 class _SYTabbarState extends State<SYTabbar> {
 
   final List<BottomNavigationBarItem> items = [
-    new BottomNavigationBarItem(icon: new Icon(Icons.chat,color: Colors.grey),title: new Text("ListView"),),
+  new BottomNavigationBarItem(icon: new Icon(Icons.chat,color: Colors.grey),title: new Text("ListView"),),
   new BottomNavigationBarItem(icon: new Icon(Icons.perm_contact_calendar,color: Colors.grey,),title: new Text("Text"),),
   new BottomNavigationBarItem(icon: new Icon(Icons.room,color: Colors.grey),title: new Text("ScrollView"),),
   new BottomNavigationBarItem(icon: new Icon(Icons.perm_identity,color: Colors.grey),title: new Text("Masony"),),
@@ -43,9 +43,9 @@ class _SYTabbarState extends State<SYTabbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text('Flutter学习demon'),
-      ),
+      // appBar: new AppBar(
+      //   title: new Text('Flutter学习demon'),
+      // ),
       bottomNavigationBar: new BottomNavigationBar(items: items,type: BottomNavigationBarType.fixed,
       onTap: (int selectIndex){
         setState(() {

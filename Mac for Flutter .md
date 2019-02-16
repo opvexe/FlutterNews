@@ -6,8 +6,11 @@ code -> perferce -> 键盘快捷键
 #### 编译设置
 command + r
 #### 热更新设置
-r
+command + h
 
-## Mac for IntelliJ IDEA
-#### 下载 IntelliJ IDEA
-#### Preferences>Plugins->install->输入Flutter 然后点击 install 安装
+##VSCode 插件 必备
+Path Autocomplete : 路径智能补全插件。
+Path Intellisense ： 路径智能提示插件。
+Chinese (Simplified) Language Pack for Visual Studio Code ： 适用于 VS Code 的中文（简体）语言包。
+
+
