@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './homeController.dart';
+import './normalController.dart';
 
 class home extends StatefulWidget {
   @override
@@ -64,10 +64,11 @@ class _TableListViewState extends State<TableListView> {
           onTap: (){
             setState(() {
                 print('Tap:$index');
+                ///MARK: 跳转事件 动态（可传参数）
                 Navigator.push(context, 
                 new MaterialPageRoute(
                   builder: (BuildContext context){
-                    // return new normalController();
+                    return new normalContrller();
                   },
                  ),
                 );
