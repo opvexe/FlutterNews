@@ -4,6 +4,8 @@ import 'package:myapp/peoples.dart';
 import 'package:myapp/found.dart';
 import 'package:myapp/mine.dart';
 
+import 'package:english_words/english_words.dart';
+
 void main(){
   runApp(new MyApp());
 }
@@ -16,12 +18,11 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
           primaryColor: Colors.red,
       ),
-      home: new Center(
-        child: new SYTabbar(),
-      ),
+      home: SYTabbar(),
     );
   }
 }
+
 
 class SYTabbar extends StatefulWidget {
   @override
