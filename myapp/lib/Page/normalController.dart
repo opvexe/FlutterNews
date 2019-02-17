@@ -12,7 +12,7 @@ class _normalContrllerState extends State<normalContrller> {
       ///设置背景色
       backgroundColor: Colors.yellow,
       appBar: new AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.green,
         title: new Text('普通UI界面布局',style: new TextStyle(fontSize: 18.0,fontStyle: FontStyle.normal),),
       ),
       body: _contentViewessWidget(),
@@ -33,7 +33,6 @@ class _contentViewessWidget extends StatelessWidget {
       ///设置文本展示位置
       alignment: Alignment.topLeft,
       padding: EdgeInsets.all(10.0),
-      
       decoration: new BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(8.0)), ///设置圆角
         color: Colors.red,    ///设置视图背景色
@@ -60,9 +59,7 @@ class _userInfolessWidget extends StatelessWidget {
     return new Expanded(
       flex: 1,
       child: new Center(
-         
         child: new Row(
-
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,

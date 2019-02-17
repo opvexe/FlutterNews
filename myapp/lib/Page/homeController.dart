@@ -39,7 +39,7 @@ class TableListView extends StatefulWidget {
 
 class _TableListViewState extends State<TableListView> {
 
- List lists = [];
+var lists =new List();
   
  final _biggerFont = const TextStyle(fontSize: 18.0);
   
@@ -47,7 +47,14 @@ class _TableListViewState extends State<TableListView> {
   void initState() {
     super.initState();
     ///初始化数据
-     lists = ['UI界面简单布局','UI界面中级布局','UI界面高级布局','UI界面高难度布局','ListView基础布局','CollectionView基础布局'];
+     lists = [
+       {'title':'UI界面简单布局','class':'normalContrller'},
+       {'title':'UI界面中级布局','class':'normalContrller'},
+       {'title':'UI界面高级布局','class':'normalContrller'},
+       {'title':'UI界面高难度布局','class':'normalContrller'},
+       {'title':'ListView基础布局','class':'normalContrller'},
+       {'title':'CollectionView基础布局','class':'normalContrller'}
+       ];
   }
 
   @override
@@ -58,7 +65,7 @@ class _TableListViewState extends State<TableListView> {
       itemBuilder: (BuildContext context,int index){
         return ListTile(
           title: new Text(
-            lists[index],
+            lists[index]['title'],
             style: _biggerFont,
           ),
           onTap: (){
