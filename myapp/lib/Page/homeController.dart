@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './homeController.dart';
 
 class home extends StatefulWidget {
   @override
@@ -17,10 +18,18 @@ class _homeState extends State<home> {
               fontStyle:FontStyle.normal, 
             ),
          ),
+         actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.list),onPressed: _right_navgation_action,)
+         ],
        ),
        body: new TableListView(),
      );
   }
+}
+
+///导航右侧按钮事件 
+void _right_navgation_action(){
+    print('action');
 }
 
 class TableListView extends StatefulWidget {
@@ -47,7 +56,6 @@ class _TableListViewState extends State<TableListView> {
       padding: const EdgeInsets.all(20.0),
       itemCount: lists.length,
       itemBuilder: (BuildContext context,int index){
-        new Divider(); ///创建分割线
         return ListTile(
           title: new Text(
             lists[index],
@@ -56,6 +64,13 @@ class _TableListViewState extends State<TableListView> {
           onTap: (){
             setState(() {
                 print('Tap:$index');
+                Navigator.push(context, 
+                new MaterialPageRoute(
+                  builder: (BuildContext context){
+                    // return new normalController();
+                  },
+                 ),
+                );
             });
           },
         );

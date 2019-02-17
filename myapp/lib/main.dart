@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Page/home.dart';
-import 'package:myapp/peoples.dart';
-import 'package:myapp/found.dart';
-import 'package:myapp/mine.dart';
-
-import 'package:english_words/english_words.dart';
+import './Page/homeController.dart';
+import './peoplesController.dart';
+import './foundController.dart';
+import './mineController.dart';
 
 void main(){
   runApp(new MyApp());
