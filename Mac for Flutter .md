@@ -8,6 +8,9 @@ command + r
 #### 热更新设置
 command + h
 
+#### 代码对齐快捷键
+Shift  +  Alt  + F     实现代码的对齐
+
 ##VSCode 插件 必备
 Path Autocomplete : 路径智能补全插件。
 Path Intellisense ： 路径智能提示插件。

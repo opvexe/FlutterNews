@@ -13,7 +13,10 @@ class _normalContrllerState extends State<normalContrller> {
       backgroundColor: Colors.yellow,
       appBar: new AppBar(
         backgroundColor: Colors.green,
-        title: new Text('普通UI界面布局',style: new TextStyle(fontSize: 18.0,fontStyle: FontStyle.normal),),
+        title: new Text(
+          '普通UI界面布局',
+          style: new TextStyle(fontSize: 18.0, fontStyle: FontStyle.normal),
+        ),
       ),
       body: _contentViewessWidget(),
     );
@@ -24,18 +27,26 @@ class _normalContrllerState extends State<normalContrller> {
 class _contentViewessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size);  ///打印屏幕尺寸
+    print(MediaQuery.of(context).size);
+
+    ///打印屏幕尺寸
     return Container(
       ///设置控件的大小
-      margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0), ///距离上，左10
+      margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+
+      ///距离上，左10
       width: MediaQuery.of(context).size.width,
       height: 200.0,
+
       ///设置文本展示位置
-      alignment: Alignment.topLeft,
       padding: EdgeInsets.all(10.0),
       decoration: new BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(8.0)), ///设置圆角
-        color: Colors.red,    ///设置视图背景色
+        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+
+        ///设置圆角
+        color: Colors.red,
+
+        ///设置视图背景色
         border: new Border.all(
           color: Colors.black,
           width: 5.0,
@@ -43,6 +54,7 @@ class _contentViewessWidget extends StatelessWidget {
       ),
       child: new Text(
         '我就是个测试文本',
+        textAlign: TextAlign.left,
         style: new TextStyle(
           fontSize: 16.0,
           fontStyle: FontStyle.normal,
@@ -63,12 +75,11 @@ class _userInfolessWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,
-
           children: <Widget>[
             new Container(
               color: Colors.red,
             ),
-            new Padding(padding: new EdgeInsets.only(left:5.0)),
+            new Padding(padding: new EdgeInsets.only(left: 5.0)),
             new Container(
               width: 60.0,
               height: 20.0,
@@ -80,7 +91,6 @@ class _userInfolessWidget extends StatelessWidget {
     );
   }
 }
-
 
 // ///MARK: 创建可变视图
 // class  contentViewfulWidget extends StatefulWidget {
@@ -100,7 +110,6 @@ class _userInfolessWidget extends StatelessWidget {
 //  String text;
 
 //  _contentViewfulWidgetState(this.text);
-
 
 //  ///MARK: 初始化
 //  @override
@@ -135,4 +144,3 @@ class _userInfolessWidget extends StatelessWidget {
 //    );
 //  }
 // }
-
