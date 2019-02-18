@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './normalController.dart';
 import './listController.dart';
+import 'package:myapp/AppBar/appbar.dart';
 
 class home extends StatefulWidget {
   @override
@@ -50,8 +51,14 @@ class _TableListViewState extends State<TableListView> {
   void initState() {
     ///初始化数据
     lists = [
-      {'title': 'UI界面简单布局', 'class': normalContrller(),},
-      {'title': 'UI界面中级布局', 'class': listController(),},
+      {
+        'title': 'AppBar 基础',
+        'class': appbarView(),
+      },
+      {
+        'title': 'UI界面中级布局',
+        'class': listController(),
+      },
       {'title': 'UI界面高级布局', 'class': listController()},
       {'title': 'UI界面高难度布局', 'class': listController()},
       {'title': 'ListView基础布局', 'class': listController()},
@@ -63,9 +70,7 @@ class _TableListViewState extends State<TableListView> {
 
   @override
   Widget build(BuildContext context) {
-    return new ListView.builder(
-      padding: const EdgeInsets.all(20.0),
-      itemCount: lists.length,
+    return new ListView.separated(
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
           title: new Text(
@@ -75,8 +80,6 @@ class _TableListViewState extends State<TableListView> {
           onTap: () {
             setState(() {
               print('Tap:$index');
-
-              ///MARK: 跳转事件 动态（可传参数）
               Navigator.push(
                 context,
                 new MaterialPageRoute(
@@ -89,6 +92,9 @@ class _TableListViewState extends State<TableListView> {
           },
         );
       },
+      itemCount: lists.length,
+      separatorBuilder: (BuildContext context, int index) =>
+          new Divider(), //创建分割线
     );
   }
 }

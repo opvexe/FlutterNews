@@ -18,10 +18,49 @@ class _normalContrllerState extends State<normalContrller> {
           style: new TextStyle(fontSize: 18.0, fontStyle: FontStyle.normal),
         ),
       ),
-      body: _contentViewessWidget(),
+      body: listContentView(),
     );
   }
 }
+
+class listContentView extends StatefulWidget {
+  @override
+  _listContentViewState createState() => _listContentViewState();
+}
+
+class _listContentViewState extends State<listContentView> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50.0,
+      padding: const EdgeInsets.only(left: 20.0),
+      decoration: new BoxDecoration(color: Colors.blue),
+      child: new Row(  //行布局
+        children: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.menu),
+            tooltip: 'Button按钮',
+            onPressed: null,
+          ),
+          new Expanded(
+            flex: 1,
+            child: new Container(
+              width: 100.0,
+              color: Colors.red,
+            ),
+          ),
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Button搜索',
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 
 ///MARK: 创建不可变视图 200.0 高100.0
 class _contentViewessWidget extends StatelessWidget {
@@ -65,32 +104,32 @@ class _contentViewessWidget extends StatelessWidget {
   }
 }
 
-class _userInfolessWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Expanded(
-      flex: 1,
-      child: new Center(
-        child: new Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            new Container(
-              color: Colors.red,
-            ),
-            new Padding(padding: new EdgeInsets.only(left: 5.0)),
-            new Container(
-              width: 60.0,
-              height: 20.0,
-              color: Colors.green,
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
+// class _userInfolessWidget extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return new Expanded(
+//       flex: 1,
+//       child: new Center(
+//         child: new Row(
+//           mainAxisAlignment: MainAxisAlignment.start,
+//           mainAxisSize: MainAxisSize.max,
+//           crossAxisAlignment: CrossAxisAlignment.center,
+//           children: <Widget>[
+//             new Container(
+//               color: Colors.red,
+//             ),
+//             new Padding(padding: new EdgeInsets.only(left: 5.0)),
+//             new Container(
+//               width: 60.0,
+//               height: 20.0,
+//               color: Colors.green,
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // ///MARK: 创建可变视图
 // class  contentViewfulWidget extends StatefulWidget {
