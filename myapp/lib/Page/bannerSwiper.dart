@@ -20,11 +20,11 @@ class _bannerSwiperViewState extends State<bannerSwiperView> {
       body: Container(
         height: 280.0,
         child: Swiper(
-          itemCount: 10, 
+          itemCount: 10,
           pagination: new SwiperPagination(),
           autoplay: true,
           duration: 3,
-          itemBuilder: (BuildContext context,int index){
+          itemBuilder: (BuildContext context, int index) {
             return new Container(
               color: Colors.yellow,
             );
@@ -34,4 +34,3 @@ class _bannerSwiperViewState extends State<bannerSwiperView> {
     );
   }
 }
-

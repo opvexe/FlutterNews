@@ -32,37 +32,57 @@ class _listControllerState extends State<listController> {
             ),
             new Expanded(
               child: ListView.builder(
-                itemCount: 20,
+                itemCount: lists.length,
                 // padding: const EdgeInsets.all(10.0), //外部间距
                 itemBuilder: (BuildContext context, int index) {
-                  return InkWell(   //点击波轮效果
+                  return InkWell(
+                    //点击波轮效果
                     onTap: () {
                       print('object$index');
                     },
 
                     child: Column(
-                      
                       children: <Widget>[
                         Container(
-                          margin: const EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
-                          width: 60.0,
+                          // margin: const EdgeInsets.only(left: 10.0),
+                          width: MediaQuery.of(context).size.width,
                           height: 60.0,
                           color: Colors.green,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
+                          padding: const EdgeInsets.only(top: 10.0),
                         ),
-                      
-                       
-                        Text(
-                          '价格$index',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: Colors.grey),
+                        Container(
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                padding: EdgeInsets.only(left: 10.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      lists[index].icon,
+                                      size: 20.0,
+                                      color: Colors.red,
+                                    ),
+                                    Padding(padding: EdgeInsets.only(left: 10.0),),
+                                    Text(lists[index].title,
+                                        style: TextStyle(color: Colors.orange)),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 20.0),
+                          padding: const EdgeInsets.only(top: 10.0),
+                        ),
+                        Container(
+                          color: Colors.purple,
+                          height: 30.0,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10.0),
                         ),
                       ],
                     ),
@@ -88,9 +108,9 @@ class ListModel {
 //创建数组
 const List<ListModel> lists = <ListModel>[
   ListModel(title: '支付', icon: Icons.pan_tool, isShow: true),
-  ListModel(title: '收藏', icon: Icons.pan_tool, isShow: true),
-  ListModel(title: '相册', icon: Icons.pan_tool, isShow: true),
-  ListModel(title: '卡包', icon: Icons.pan_tool, isShow: true),
-  ListModel(title: '表情', icon: Icons.pan_tool, isShow: false),
-  ListModel(title: '设置', icon: Icons.pan_tool, isShow: true),
+  ListModel(title: '收藏', icon: Icons.camera, isShow: true),
+  ListModel(title: '相册', icon: Icons.home, isShow: true),
+  ListModel(title: '卡包', icon: Icons.history, isShow: true),
+  ListModel(title: '表情', icon: Icons.list, isShow: false),
+  ListModel(title: '设置', icon: Icons.offline_pin, isShow: true),
 ];
