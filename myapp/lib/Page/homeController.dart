@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import './listController.dart';
 import './bannerSwiper.dart';
 import './gridViewCollection.dart';
+import './normalController.dart';
+import './complexListView.dart';
 
 import 'package:myapp/AppBar/appbar.dart';
 
@@ -54,8 +56,8 @@ class _TableListViewState extends State<TableListView> {
     ///初始化数据
     lists = [
       {
-        'title': 'AppBar 基础',
-        'class': appbarView(),
+        'title': 'Ordinary 普通视图',
+        'class': normalContrller(),
       },
       {
         'title': 'Swiper 轮播视图',
@@ -66,17 +68,25 @@ class _TableListViewState extends State<TableListView> {
         'class': gridViewCollection()
         },
       {
-        'title': 'UI界面高难度布局', 
+        'title': 'ListView 简单视图', 
         'class': listController()
         },
       {
-        'title': 'ListView基础布局',
-         'class': listController()
+        'title': 'ListView 复杂视图',
+         'class': complexListView()
          },
       {
-        'title': 'CollectionView基础布局', 
+        'title': 'ScrollView 滚动视图', 
         'class': listController()
-        }
+        },
+      {
+        'title': 'ScrollView 滚动视图', 
+        'class': listController()
+        },
+         {
+        'title': 'ScrollView 滚动视图', 
+        'class': listController()
+        },
     ];
 
     super.initState();

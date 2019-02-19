@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
       title: 'title',
       theme: new ThemeData(
         primaryColor: Colors.orange.shade400, ///tabbar 选中颜色
-        textSelectionColor: Colors.red,
       ),
       home: tabbarController(),
     );
