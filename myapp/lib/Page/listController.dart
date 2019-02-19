@@ -58,14 +58,17 @@ class _listControllerState extends State<listController> {
                               Container(
                                 alignment: Alignment.centerLeft,
                                 padding: EdgeInsets.only(left: 10.0),
+                                color: Colors.brown,
                                 child: Row(
                                   children: <Widget>[
                                     Icon(
                                       lists[index].icon,
-                                      size: 20.0,
-                                      color: Colors.red,
+                                      size: 25.0,
+                                      color: Colors.grey,
                                     ),
-                                    Padding(padding: EdgeInsets.only(left: 10.0),),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 10.0),
+                                    ),
                                     Text(lists[index].title,
                                         style: TextStyle(color: Colors.orange)),
                                   ],
@@ -107,10 +110,10 @@ class ListModel {
 
 //创建数组
 const List<ListModel> lists = <ListModel>[
-  ListModel(title: '支付', icon: Icons.pan_tool, isShow: true),
-  ListModel(title: '收藏', icon: Icons.camera, isShow: true),
-  ListModel(title: '相册', icon: Icons.home, isShow: true),
-  ListModel(title: '卡包', icon: Icons.history, isShow: true),
-  ListModel(title: '表情', icon: Icons.list, isShow: false),
-  ListModel(title: '设置', icon: Icons.offline_pin, isShow: true),
+  ListModel(title: '支付', icon: Icons.star, isShow: true),
+  ListModel(title: '收藏', icon: Icons.link, isShow: true),
+  ListModel(title: '相册', icon: Icons.list, isShow: true),
+  ListModel(title: '卡包', icon: Icons.photo, isShow: true),
+  ListModel(title: '表情', icon: Icons.face, isShow: false),
+  ListModel(title: '设置', icon: Icons.settings, isShow: true),
 ];

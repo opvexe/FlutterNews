@@ -54,7 +54,7 @@ class _tabbarControllerState extends State<tabbarController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,  ///设置controller背景视图颜色
+      backgroundColor: Colors.orange.shade400,  ///设置controller背景视图颜色
       bottomNavigationBar: new BottomNavigationBar(
         items: items,
         type: BottomNavigationBarType.fixed,

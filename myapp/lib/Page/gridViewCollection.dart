@@ -16,6 +16,8 @@ class _gridViewCollectionState extends State<gridViewCollection> {
         height: 320.0,
         padding: const EdgeInsets.fromLTRB(4.0, 20.0, 4.0, 4.0),
         child: GridView.count(
+          physics: NeverScrollableScrollPhysics(),
+    //解决scollview嵌套  滑动gridview的区域 没反应的问题
           crossAxisCount: 5,
           mainAxisSpacing: 20.0, //竖向间距
           crossAxisSpacing: 4.0, //横向间距

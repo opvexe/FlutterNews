@@ -4,7 +4,7 @@ import './bannerSwiper.dart';
 import './gridViewCollection.dart';
 import './normalController.dart';
 import './complexListView.dart';
-
+import './rowController.dart';
 import 'package:myapp/AppBar/appbar.dart';
 
 class home extends StatefulWidget {
@@ -76,12 +76,12 @@ class _TableListViewState extends State<TableListView> {
          'class': complexListView()
          },
       {
-        'title': 'ScrollView 滚动视图', 
-        'class': listController()
+        'title': 'AppBar 导航视图', 
+        'class': appbarView()
         },
       {
-        'title': 'ScrollView 滚动视图', 
-        'class': listController()
+        'title': 'Row 视图', 
+        'class': rowController()
         },
          {
         'title': 'ScrollView 滚动视图', 
