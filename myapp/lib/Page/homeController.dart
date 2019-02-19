@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import './normalController.dart';
 import './listController.dart';
+import './bannerSwiper.dart';
+import './gridViewCollection.dart';
+
 import 'package:myapp/AppBar/appbar.dart';
 
 class home extends StatefulWidget {
@@ -56,13 +58,25 @@ class _TableListViewState extends State<TableListView> {
         'class': appbarView(),
       },
       {
-        'title': 'UI界面中级布局',
-        'class': listController(),
+        'title': 'Swiper 轮播视图',
+        'class': bannerSwiperView(),
       },
-      {'title': 'UI界面高级布局', 'class': listController()},
-      {'title': 'UI界面高难度布局', 'class': listController()},
-      {'title': 'ListView基础布局', 'class': listController()},
-      {'title': 'CollectionView基础布局', 'class': listController()}
+      {
+        'title': 'GridView 瀑布流视图', 
+        'class': gridViewCollection()
+        },
+      {
+        'title': 'UI界面高难度布局', 
+        'class': listController()
+        },
+      {
+        'title': 'ListView基础布局',
+         'class': listController()
+         },
+      {
+        'title': 'CollectionView基础布局', 
+        'class': listController()
+        }
     ];
 
     super.initState();

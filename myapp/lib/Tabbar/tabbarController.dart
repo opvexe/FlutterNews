@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/mineController.dart';
 import 'package:myapp/foundController.dart';
@@ -20,7 +21,7 @@ class _tabbarControllerState extends State<tabbarController> {
 
     items = [
       new BottomNavigationBarItem(
-        icon: new Icon(Icons.chat, color: Colors.grey),
+        icon:Icon(CupertinoIcons.home),
         title: new Text("普通视图"),
       ),
       new BottomNavigationBarItem(
@@ -53,6 +54,7 @@ class _tabbarControllerState extends State<tabbarController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red,  ///设置controller背景视图颜色
       bottomNavigationBar: new BottomNavigationBar(
         items: items,
         type: BottomNavigationBarType.fixed,

@@ -6,12 +6,12 @@ class appbarView extends StatefulWidget {
 }
 
 class _appbarViewState extends State<appbarView> {
+  //默认选中第一个
+  ChocieClass _selectedChoice = choices[0];
 
-  ChocieClass _selectedChoice = choices[0];   ///默认选中第一个
-  
-  void _select(ChocieClass choice){
+  void _select(ChocieClass choice) {
     setState(() {
-      _selectedChoice =choice;
+      _selectedChoice = choice;
     });
   }
 
@@ -24,24 +24,30 @@ class _appbarViewState extends State<appbarView> {
           //导航按钮
           new IconButton(
             icon: Icon(choices[0].icon),
-            onPressed: () { _select(choices[0]); },
+            onPressed: () {
+              _select(choices[0]);
+            },
           ),
           new IconButton(
             icon: Icon(choices[1].icon),
-            onPressed: () { _select(choices[1]); },
+            onPressed: () {
+              _select(choices[1]);
+            },
           ),
-          // new PopupMenuButton(
-          //   onSelected: _select,
-          //   itemBuilder: (BuildContext context) {
-          //       return choices.skip(2).map<PopupMenuItem<ChocieClass>>((ChocieClass choice) {
-          //         return PopupMenuItem<ChocieClass>(
-          //           value: choice,
-          //           child: Text(choice.title),
-          //         );
-          //       }).toList();
-          //   },
-          // ),
-          ],
+          new PopupMenuButton(
+            onSelected: _select,
+            itemBuilder: (BuildContext context) {
+              return choices
+                  .skip(2)
+                  .map<PopupMenuItem<ChocieClass>>((ChocieClass choice) {
+                return PopupMenuItem<ChocieClass>(
+                  value: choice,
+                  child: Text(choice.title),
+                );
+              }).toList();
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -53,7 +59,7 @@ class _appbarViewState extends State<appbarView> {
 
 //创建类对象
 class ChocieClass {
-  const ChocieClass({this.title,this.icon});
+  const ChocieClass({this.title, this.icon});
   final String title;
   final IconData icon;
 }
@@ -67,17 +73,15 @@ const List<ChocieClass> choices = <ChocieClass>[
   ChocieClass(title: '行走', icon: Icons.directions_walk),
 ];
 
-
-
 class ChoiceCard extends StatelessWidget {
-  const ChoiceCard({Key key,this.choice}):super(key:key);
+  const ChoiceCard({Key key, this.choice}) : super(key: key);
   final ChocieClass choice;
 
   @override
   Widget build(BuildContext context) {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Card(
-      color: Colors.purple,
+      color: Colors.white,
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
