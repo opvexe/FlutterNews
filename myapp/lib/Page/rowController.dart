@@ -44,8 +44,10 @@ class _rowControllerState extends State<rowController> {
                     child: Container(
                       margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
                       child: Text(
-                        'This project is a starting point for a Flutter application',
+                        'This project is a starting point for a Flutter applicationThis project is a starting point for a Flutter applicationThis project is a starting point for a Flutter application',
                         style: TextStyle(fontSize: 15.0, color: Colors.black),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ),

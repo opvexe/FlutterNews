@@ -5,6 +5,7 @@ import './gridViewCollection.dart';
 import './normalController.dart';
 import './complexListView.dart';
 import './rowController.dart';
+import './cardController.dart';
 import 'package:myapp/AppBar/appbar.dart';
 
 class home extends StatefulWidget {
@@ -56,6 +57,10 @@ class _TableListViewState extends State<TableListView> {
     ///初始化数据
     lists = [
       {
+        'title': 'AppBar 导航视图',
+         'class': appbarView(),
+         },
+      {
         'title': 'Ordinary 普通视图',
         'class': normalContrller(),
       },
@@ -65,27 +70,23 @@ class _TableListViewState extends State<TableListView> {
       },
       {
         'title': 'GridView 瀑布流视图', 
-        'class': gridViewCollection()
+        'class': gridViewCollection(),
         },
       {
         'title': 'ListView 简单视图', 
-        'class': listController()
+        'class': listController(),
         },
       {
-        'title': 'ListView 复杂视图',
-         'class': complexListView()
-         },
-      {
-        'title': 'AppBar 导航视图', 
-        'class': appbarView()
+        'title': 'ListView 复杂视图', 
+        'class': complexListView(),
         },
       {
         'title': 'Row 视图', 
-        'class': rowController()
+        'class': rowController(),
         },
-         {
-        'title': 'ScrollView 滚动视图', 
-        'class': listController()
+      {
+        'title': 'Card 卡片视图', 
+        'class': cardController(),
         },
     ];
 
