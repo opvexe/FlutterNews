@@ -7,6 +7,9 @@ import './complexListView.dart';
 import './rowController.dart';
 import './cardController.dart';
 import 'package:myapp/AppBar/appbar.dart';
+import './expandController.dart';
+import './stackController.dart';
+import './indexedStackController.dart';
 
 class home extends StatefulWidget {
   @override
@@ -87,6 +90,18 @@ class _TableListViewState extends State<TableListView> {
       {
         'title': 'Card 卡片视图', 
         'class': cardController(),
+        },
+       {
+        'title': 'Expand 视图', 
+        'class': expandController(),
+        },
+        {
+        'title': 'Stack ,Positioned 视图', 
+        'class': stackCpntroller(),
+        },
+        {
+        'title': 'IndexStack 视图', 
+        'class': indexedStackController(),
         },
     ];
 
