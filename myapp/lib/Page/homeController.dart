@@ -20,6 +20,8 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        elevation: 0.0, ///去掉底部阴影
+        centerTitle: true,
         title: new Text(
           'UI界面布局',
           style: new TextStyle(

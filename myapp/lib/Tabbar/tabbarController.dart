@@ -29,7 +29,7 @@ class _tabbarControllerState extends State<tabbarController> {
           Icons.perm_contact_calendar,
           color: Colors.grey,
         ),
-        title: new Text("常见布局"),
+        title: new Text("自如app"),
       ),
       new BottomNavigationBarItem(
         icon: new Icon(Icons.room, color: Colors.grey),

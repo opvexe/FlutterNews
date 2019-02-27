@@ -11,8 +11,11 @@ class _foundState extends State<found> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "常见布局",
+          "自如首页",
         ),
+      ),
+      body: Container(
+        
       ),
     );
   }
