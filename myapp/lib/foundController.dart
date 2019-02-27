@@ -8,6 +8,12 @@ class found extends StatefulWidget {
 class _foundState extends State<found> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "常见布局",
+        ),
+      ),
+    );
   }
 }

@@ -3,7 +3,6 @@ import './listController.dart';
 import './bannerSwiper.dart';
 import './gridViewCollection.dart';
 import './normalController.dart';
-import './complexListView.dart';
 import './rowController.dart';
 import './cardController.dart';
 import 'package:myapp/AppBar/appbar.dart';
@@ -78,10 +77,6 @@ class _TableListViewState extends State<TableListView> {
       {
         'title': 'ListView 简单视图', 
         'class': listController(),
-        },
-      {
-        'title': 'ListView 复杂视图', 
-        'class': complexListView(),
         },
       {
         'title': 'Row 视图', 
