@@ -114,6 +114,7 @@ class _TableListViewState extends State<TableListView> {
             lists[index]['title'],
             style: _biggerFont,
           ),
+          trailing: new Icon(Icons.keyboard_arrow_right),
           onTap: () {
             setState(() {
               print('Tap:$index');

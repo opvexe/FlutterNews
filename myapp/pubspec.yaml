@@ -47,6 +47,8 @@ flutter:
     - assets/images/publish_work_sign.png
     - assets/images/share_qq.png
     - assets/images/share_wechat.png
+    - assets/images/select_down_city.png
+    - assets/images/select_message.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 

@@ -26,14 +26,14 @@ class _tabbarControllerState extends State<tabbarController> {
       ),
       new BottomNavigationBarItem(
         icon: new Icon(
-          Icons.perm_contact_calendar,
+          Icons.adjust,
           color: Colors.grey,
         ),
-        title: new Text("自如app"),
+        title: new Text("自如首页"),
       ),
       new BottomNavigationBarItem(
         icon: new Icon(Icons.room, color: Colors.grey),
-        title: new Text("瀑布流视图"),
+        title: new Text("发布视图"),
       ),
       new BottomNavigationBarItem(
         icon: new Icon(Icons.perm_identity, color: Colors.grey),
