@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'Page/headerWidget.dart';
 
 class found extends StatefulWidget {
   @override
@@ -35,6 +36,9 @@ class _foundState extends State<found> {
             url: items,
           ),
           houseWidget(),
+          headerWidget(
+            imageUrl: "https://webimg.ziroom.com/bfcbe5ad-9c28-4d0f-bf6b-3518ba925382.png",
+          ),
           houseWidget(),
           travelWidget(),
         ],
