@@ -43,6 +43,7 @@ class _foundState extends State<found> {
   }
 }
 
+
 class houseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -50,19 +51,65 @@ class houseWidget extends StatelessWidget {
       height: 120.0,
       margin: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Container(
-            color: Colors.orange.shade300,
-            width: 120.0,
+          Expanded(
+            child: Container(
+              color: Colors.orange.shade300,
+              // width: 120.0,
+              padding: EdgeInsets.zero,
+            ),
+            flex: 1,
           ),
-          Container(
-            color: Colors.red,
-            width: 120.0,
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.white,
+              // width: 120.0,
+              padding: EdgeInsets.only(left: 10.0),
+              child: Container(
+                margin: EdgeInsets.zero,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Container(
+                      color: Colors.green,
+                      height: 55.0,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 10.0),
+                      color: Colors.purple,
+                      height: 55.0,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-          Container(
-            color: Colors.purple,
-            width: 120.0,
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.white,
+              // width: 120.0,
+              padding: EdgeInsets.only(left: 10.0),
+              child: Container(
+                margin: EdgeInsets.zero,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Container(
+                      color: Colors.green,
+                      height: 55.0,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 10.0),
+                      color: Colors.purple,
+                      height: 55.0,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -79,19 +126,29 @@ class travelWidget extends StatelessWidget {
       height: 60.0,
       margin: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Container(
-            height: 60.0,
-            color: Colors.green,
+          Expanded(
+            child: Container(
+              color: Colors.green,
+              margin: EdgeInsets.zero,
+            ),
+            flex: 1,
           ),
-          Container(
-             height: 60.0,
-            color: Colors.red,
+          Expanded(
+            child: Container(
+              width: 60.0,
+              color: Colors.red,
+              margin: EdgeInsets.only(left: 10.0),
+            ),
+            flex: 1,
           ),
-          Container(
-            height: 60.0,
-            color: Colors.orange,
+          Expanded(
+            child: Container(
+              width: 60.0,
+              color: Colors.orange,
+              margin: EdgeInsets.only(left: 10.0),
+            ),
           ),
         ],
       ),
@@ -112,7 +169,7 @@ class swipWidget extends StatelessWidget {
       color: Colors.black,
       margin: EdgeInsets.all(20.0),
       child: Swiper(
-        physics: const AlwaysScrollableScrollPhysics(),
+        physics: NeverScrollableScrollPhysics(),
         itemCount: url.length,
         autoplay: true,
         autoplayDelay: 3, //横向滚动
