@@ -29,23 +29,39 @@ class _foundState extends State<found> {
           )
         ],
       ),
-      body: ListView(
-        // physics: NeverScrollableScrollPhysics(),
-        children: <Widget>[
-          swipWidget(
-            url: items,
-          ),
-          houseWidget(),
-          headerWidget(
-            imageUrl: "https://webimg.ziroom.com/bfcbe5ad-9c28-4d0f-bf6b-3518ba925382.png",
-          ),
-          houseWidget(),
-          travelWidget(),
-        ],
-      ),
+        body: Center(
+          
+        ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class houseWidget extends StatelessWidget {

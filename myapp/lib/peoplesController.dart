@@ -9,6 +9,7 @@ class _peoplesState extends State<peoples> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0, //去掉导航底部阴影
@@ -36,8 +37,7 @@ class _peoplesState extends State<peoples> {
 class _peopleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
+    return SingleChildScrollView(
       padding: EdgeInsets.only(top: 30.0),
       child: Column(
         children: <Widget>[
