@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'title',
       theme: new ThemeData(
-        primaryColor: Colors.orange.shade400, ///tabbar 选中颜色
+        primaryColor: Colors.cyan.shade400, ///tabbar 选中颜色
       ),
       home: tabbarController(),
     );

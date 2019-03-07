@@ -4,6 +4,7 @@ import 'package:myapp/mineController.dart';
 import 'package:myapp/foundController.dart';
 import 'package:myapp/peoplesController.dart';
 import 'package:myapp/Page/homeController.dart';
+import 'package:myapp/profile.dart';
 
 class tabbarController extends StatefulWidget {
   @override
@@ -22,28 +23,36 @@ class _tabbarControllerState extends State<tabbarController> {
     items = [
       new BottomNavigationBarItem(
         icon:Icon(CupertinoIcons.home),
-        title: new Text("普通视图"),
+        title: new Text("首页"),
       ),
       new BottomNavigationBarItem(
         icon: new Icon(
           Icons.adjust,
           color: Colors.grey,
         ),
-        title: new Text("自如首页"),
+        title: new Text("商品"),
+      ),
+      new BottomNavigationBarItem(
+        icon: new Icon(
+          Icons.adjust,
+          color: Colors.grey,
+        ),
+        title: new Text("我的"),
       ),
       new BottomNavigationBarItem(
         icon: new Icon(Icons.room, color: Colors.grey),
-        title: new Text("发布视图"),
+        title: new Text("发布"),
       ),
       new BottomNavigationBarItem(
         icon: new Icon(Icons.perm_identity, color: Colors.grey),
-        title: new Text("视图布局"),
+        title: new Text("设置"),
       ),
     ];
 
     controllers = [
       new home(),
       new found(),
+      new profile(),
       new peoples(),
       new mine(),
     ];
