@@ -29,40 +29,327 @@ class _foundState extends State<found> {
           )
         ],
       ),
-        body: Center(
-          
-        ),
+      body: _productWidget(),
     );
   }
 }
 
+class _productWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.expand,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            _backgroundWidget(),
+            bottomHalf(),
+          ],
+        ),
+        _productDetailWidget(),
+      ],
+    );
+  }
 
+  Widget bottomHalf() {
+    return Flexible(
+      flex: 3,
+      child: new Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.blueGrey.shade800,
+              Colors.black87,
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
+class _productDetailWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: deviceSize.height / 4,
+          ),
+          _topCardWidget(context),
+          _photoWidget(context),
+          _descWidget(context),
+          _selectWidget(context),
+        ],
+      ),
+    );
+  }
 
+  Widget _topCardWidget(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 18.0),
+      child: Card(
+        elevation: 2.0,
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Text(
+                "价格",
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text("海澜之家"),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    "4星好评",
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                  Text(
+                    "￥ 20.0",
+                    style: TextStyle(
+                        color: Colors.orange.shade800,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 25.0),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
+  //衣服相册
+  Widget _photoWidget(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
+    return SizedBox(
+      height: deviceSize.height / 5,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 18.0),
+        child: Card(
+          elevation: 2.0,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Image.network(
+                  "https://mosaic02.ztat.net/vgs/media/pdp-zoom/LE/22/1D/02/2A/12/LE221D022-A12@16.1.jpg",
+                  fit: BoxFit.cover,
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
 
+//描述
+  Widget _descWidget(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(horizontal: 18.0),
+      child: Card(
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text("描述",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w700,
+                  )),
+              SizedBox(
+                height: 5.0,
+              ),
+              Text("牛仔裤 T-shirt",
+                  style:
+                      TextStyle(fontSize: 15.0, fontWeight: FontWeight.normal)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
+//选择款式
+  Widget _selectWidget(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 18.0),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: _shopWidget(),
+          
+        ),
+      ),
+    );
+  }
+}
 
+///选择
+class _shopWidget extends StatefulWidget {
+  @override
+  __shopWidgetState createState() => __shopWidgetState();
+}
 
+class __shopWidgetState extends State<_shopWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[],
+    );
+  }
 
+  Widget _colorWidget(BuildContext context) {
+    String _value = "Cyan";
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("颜色",style:TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0)),
+          SizedBox(height: 10.0,),
+          // Wrap(
+          //   alignment: WrapAlignment.spaceBetween,
+          //   children: <Widget>[
+          //     Padding(
+          //         padding: const EdgeInsets.all(8.0),
+          //         child: ChoiceChip(
+          //           selectedColor: Colors.red,
+          //           label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
+          //           selected: true,
+          //           onSelected: (selected){
+          //             setState(() {
+          //               _value = selected?"red":"Cyan";
+          //             });
+          //           },
+          //         ),
+          //     ),
+          //     // Padding(
+          //     //     padding: const EdgeInsets.all(8.0),
+          //     //     child: ChoiceChip(
+          //     //       selectedColor: Colors.red,
+          //     //       label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
+          //     //       selected: true,
+          //     //       onSelected: (selected){
+          //     //         setState(() {
+          //     //           _value = selected?"red":"Cyan";
+          //     //         });
+          //     //       },
+          //     //     ),
+          //     // ),
+          //     // Padding(
+          //     //     padding: const EdgeInsets.all(8.0),
+          //     //     child: ChoiceChip(
+          //     //       selectedColor: Colors.red,
+          //     //       label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
+          //     //       selected: true,
+          //     //       onSelected: (selected){
+          //     //         setState(() {
+          //     //           _value = selected?"red":"Cyan";
+          //     //         });
+          //     //       },
+          //     //     ),
+          //     // ),
+          //     // Padding(
+          //     //     padding: const EdgeInsets.all(8.0),
+          //     //     child: ChoiceChip(
+          //     //       selectedColor: Colors.red,
+          //     //       label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
+          //     //       selected: true,
+          //     //       onSelected: (selected){
+          //     //         setState(() {
+          //     //           _value = selected?"red":"Cyan";
+          //     //         });
+          //     //       },
+          //     //     ),
+          //     // ),
+          //   ],
+          // ),
+        ],
+    );
+  }
+}
 
+//绘制背景图片
+class _backgroundWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
+    return Flexible(
+      flex: 2,
+      child: ClipPath(
+        clipper: ArcClipper(),
+        child: Stack(
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.blueGrey.shade800,
+                    Colors.black87,
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              child: Image.network(
+                "https://mosaic02.ztat.net/vgs/media/pdp-zoom/LE/22/1D/02/2A/12/LE221D022-A12@16.1.jpg",
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
+//绘制半弧形
+class ArcClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0.0, size.height - 30);
 
+    ///绘制左侧半弧形
+    var firstControlPoint = Offset(size.width / 4, size.height);
+    var firstPoint = Offset(size.width / 2, size.height);
+    path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
+        firstPoint.dx, firstPoint.dy);
 
+    //绘制右侧半弧形
+    var secondControlPoint = Offset(size.width - (size.width / 4), size.height);
+    var secondPoint = Offset(size.width, size.height - 30);
 
+    path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
+        secondPoint.dx, secondPoint.dy);
 
+    path.lineTo(size.width, 0.0);
+    path.close();
+    return path;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
 
 class houseWidget extends StatelessWidget {
   @override
