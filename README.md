@@ -22,4 +22,4 @@
 > 主要功能 ：SingleScrollView，Colum ,Row的使用 <br> 
 > 主要类型 ：FitBox的使用 <br>
 > 
-![image(https://github.com/shumintao/FlutterNews/blob/master/WechatIMG2.jpeg)
+![image](https://github.com/shumintao/FlutterNews/blob/master/WechatIMG2.jpeg)
