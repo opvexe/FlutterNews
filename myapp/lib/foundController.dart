@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'Page/headerWidget.dart';
+import './productColor.dart';
 
 class found extends StatefulWidget {
   @override
@@ -189,103 +190,18 @@ class _productDetailWidget extends StatelessWidget {
 
 //选择款式
   Widget _selectWidget(BuildContext context) {
-    return Container(
-      width: double.infinity,
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: _shopWidget(),
-          
+          child: colorController(),          
         ),
       ),
     );
   }
 }
 
-///选择
-class _shopWidget extends StatefulWidget {
-  @override
-  __shopWidgetState createState() => __shopWidgetState();
-}
-
-class __shopWidgetState extends State<_shopWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[],
-    );
-  }
-
-  Widget _colorWidget(BuildContext context) {
-    String _value = "Cyan";
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text("颜色",style:TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0)),
-          SizedBox(height: 10.0,),
-          // Wrap(
-          //   alignment: WrapAlignment.spaceBetween,
-          //   children: <Widget>[
-          //     Padding(
-          //         padding: const EdgeInsets.all(8.0),
-          //         child: ChoiceChip(
-          //           selectedColor: Colors.red,
-          //           label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
-          //           selected: true,
-          //           onSelected: (selected){
-          //             setState(() {
-          //               _value = selected?"red":"Cyan";
-          //             });
-          //           },
-          //         ),
-          //     ),
-          //     // Padding(
-          //     //     padding: const EdgeInsets.all(8.0),
-          //     //     child: ChoiceChip(
-          //     //       selectedColor: Colors.red,
-          //     //       label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
-          //     //       selected: true,
-          //     //       onSelected: (selected){
-          //     //         setState(() {
-          //     //           _value = selected?"red":"Cyan";
-          //     //         });
-          //     //       },
-          //     //     ),
-          //     // ),
-          //     // Padding(
-          //     //     padding: const EdgeInsets.all(8.0),
-          //     //     child: ChoiceChip(
-          //     //       selectedColor: Colors.red,
-          //     //       label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
-          //     //       selected: true,
-          //     //       onSelected: (selected){
-          //     //         setState(() {
-          //     //           _value = selected?"red":"Cyan";
-          //     //         });
-          //     //       },
-          //     //     ),
-          //     // ),
-          //     // Padding(
-          //     //     padding: const EdgeInsets.all(8.0),
-          //     //     child: ChoiceChip(
-          //     //       selectedColor: Colors.red,
-          //     //       label: Text("黄色",style: TextStyle(fontWeight: FontWeight.bold),),
-          //     //       selected: true,
-          //     //       onSelected: (selected){
-          //     //         setState(() {
-          //     //           _value = selected?"red":"Cyan";
-          //     //         });
-          //     //       },
-          //     //     ),
-          //     // ),
-          //   ],
-          // ),
-        ],
-    );
-  }
-}
 
 //绘制背景图片
 class _backgroundWidget extends StatelessWidget {
