@@ -4,6 +4,8 @@
 ```
 ## Flutter  
 
-
 ###### 首页
-![image](https://github.com/shumintao/news/blob/master/demon1.png)
+> 主要功能 ：UI界面布局 <br> 
+> 主要类型 ：布局类型的使用 <br>
+> 
+![image](https://github.com/shumintao/FlutterNews/blob/master/WechatIMG4.jpeg)
